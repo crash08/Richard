@@ -86,9 +86,9 @@ img, svg {
 }
 
 .container {
-  max-width: 1212px;
+  max-width: 1252px;
   height: 100%;
-  padding: 0 30px;
+  padding: 0 50px;
   margin: 0 auto;
 }
 
@@ -173,7 +173,7 @@ img, svg {
 }
 
 .hero__content {
-  width: 108%;
+  width: 120%;
 }
 
 .hero__col:nth-child(2) {
@@ -181,6 +181,7 @@ img, svg {
 }
 
 .hero__title {
+  margin-bottom: 10px;
   font-size: 80px;
   font-weight: 400;
   line-height: 80px;
@@ -188,6 +189,7 @@ img, svg {
 }
 
 .hero__subtitle {
+  margin-bottom: 25px;
   font-size: 30px;
   font-weight: 400;
   line-height: 44px;
@@ -212,18 +214,27 @@ img, svg {
 }
 
 .hero__img {
+  position: relative;
   width: 100%;
   height: 100%;
-  flex-basis: 680px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin-top: var(--header-height);
+  padding-bottom: 30%;
+  overflow: hidden;
+}
+
+.hero__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .hero__next {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: calc(50% - 9px/2);
   display: block;
   width: 9px;
   height: 40px;
@@ -274,13 +285,336 @@ img, svg {
   width: 60%;
 }
 
-.two__img {
+/* .two__img {
+  position: relative;
   width: 100%;
   height: 100%;
-  background-size: 100% 100%;
-  background-position: center;
+  padding-bottom: 40%;
+}
+
+.two__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+} */
+
+
+
+
+
+/* ============================================================================
+    #THREE
+============================================================================ */
+
+.three {
+  padding-top: 80px;
+  margin-bottom: 160px;
+}
+
+.three__container {
+  padding: 0 160px;
+}
+
+.three__row {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--gap)*2);
+}
+
+.three__row:not(:last-of-type) {
+  margin-bottom: 160px;
+}
+
+.three__col {
+  width: 100%;
+}
+
+.three__text-wrap {
+  width: 70%;
+}
+
+.three__text-title {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #A8A8A8;
+}
+
+.three__text-subtitle {
+  margin-bottom: 22px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 48px;
+  color: var(--font-color-dark);
+}
+
+.three__text-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #6B6B6B;
+}
+
+.three__img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 140%;
+}
+
+.three__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+
+
+/* ============================================================================
+    #BENEFITS
+============================================================================ */
+
+.benefits {
+  margin-bottom: 160px;
+}
+
+.benefits__list {
+  display: flex;
+  gap: calc(var(--gap)*2);
+}
+
+.benefits__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefits__icon {
+  margin-bottom: 40px;
+  display: block;
+  background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 500px;
+  background-position: center center;
+}
+
+.benefits__icon_01 {
+  width: 80px;
+  height: 35px;
+  background-image: url(../img/benefits/benefits_01.svg);
+}
+
+.benefits__icon_02 {
+  width: 74px;
+  height: 35px;
+  background-image: url(../img/benefits/benefits_02.svg);
+}
+
+.benefits__icon_03 {
+  width: 40px;
+  height: 35px;
+  background-image: url(../img/benefits/benefits_03.svg);
+}
+
+.benefits__title {
+  margin-bottom: 17px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--font-color-dark);
+}
+
+.benefits__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #6B6B6B;
+  text-align: center;
+}
+
+
+
+
+
+/* ============================================================================
+    #ACHIEVEMENTS
+============================================================================ */
+
+.achievements {
+  margin-bottom: 160px;
+}
+
+.achievements__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.achievements__item {
+  flex: 0 0 auto;
+}
+
+.achievements__title {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 59px;
+  line-height: 90px;
+  text-align: center;
+  color: #333333;
+}
+
+.achievements__description {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+
+
+
+
+/* ============================================================================
+    #FOUR
+============================================================================ */
+
+.four {
+  margin-bottom: 160px;
+}
+
+.four__row:not(:last-of-type) {
+  margin-bottom: 160px;
+}
+
+.four__row {
+  display: flex;
+  align-items: center;
+}
+
+.four__col {
+  flex: 0 0 50%;
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
+}
+
+.four__col-text {
+  flex-basis: 45%;
+}
+
+.four__img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 75%;
+}
+
+.four__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.four__img_left img {
+  object-position: left;
+}
+
+.four__img_right img {
+  object-position: right;
+}
+
+.four__text-wrap {
+  width: 70%;
+  margin: 0 auto;
+  padding: 18px 0;
+}
+
+.four__text-title {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #A8A8A8;
+}
+
+.four__text-subtitle {
+  margin-bottom: 22px;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 48px;
+  color: var(--font-color-dark);
+}
+
+.four__text-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #6B6B6B;
+}
+
+.four__text-description b {
+
+}
+
+
+
+
+
+/* ============================================================================
+    #QUOTE
+============================================================================ */
+
+.quote {
+  margin-bottom: 120px;
+}
+.quote__container {
+}
+.container {
+}
+.quote-01 {
+}
+.quote__blockquote {
+}
+.quote__pic {
+}
+.quote__author {
+}
+.quote__journal {
+}
+.quote__bullets {
+}
+
+
+
+
+
+/* ============================================================================
+    #COMPANY
+============================================================================ */
+
+.company {
+  margin-bottom: 120px;
+}
+.company__container {
+  padding: 0 115px;
+}
+.company__img {
 }
 
 
@@ -295,6 +629,7 @@ img, svg {
   background: linear-gradient(276.18deg, #6E28B1 0%, rgba(0, 0, 0, 0) 100%), #FC0A7E;
 
 }
+
 .download__container {
   background-image: url(../img/download-vector.svg);
   background-repeat: no-repeat;
@@ -305,6 +640,7 @@ img, svg {
   flex-direction: column;
   align-items: center;
 }
+
 .download__title {
   margin-bottom: 40px;
   font-weight: 400;
@@ -312,11 +648,13 @@ img, svg {
   line-height: 48px;
   color: var(--font-color-light);
 }
+
 .download__button-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .download__button {
   display: block;
   font-weight: 400;
@@ -328,10 +666,7 @@ img, svg {
 .download__button:not(:last-of-type) {
   margin-right: 10px;
 }
-.button {
-}
-.button_color {
-}
+
 .button_transparent {
   border: 1px solid #B04BB3
 }
@@ -348,13 +683,13 @@ img, svg {
   padding-bottom: 125px;
   background-color: var(--main-theme-color-2);
 }
+
 .get__container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.container {
-}
+
 .get__title {
   margin-bottom: 20px;
   font-weight: 400;
@@ -362,6 +697,7 @@ img, svg {
   line-height: 48px;
   color: var(--font-color-light);
 }
+
 .get__subtitle {
   margin-bottom: 40px;
   font-weight: 400;
